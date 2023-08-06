@@ -1,5 +1,8 @@
 @import url(colors.css);
 
+:root {
+  --smaller: 0.75;
+}
 * {
   margin: 0;
   padding: 0;
@@ -31,7 +34,7 @@ header {
 }
 
 .links {
-  width: 45%;
+  width: 40%;
   display: flex;
   font-size: 18px;
   align-items: center;
@@ -43,7 +46,7 @@ header {
   color: white;
   cursor: pointer;
   font-size: 19px;
-  padding: 12px 26px;
+  padding: 18px 30px;
   border-radius: 12px;
   background-color: var(--purple);
 }
@@ -55,6 +58,7 @@ header {
 
 main {
   display: flex;
+  flex-direction: column;
   padding: 70px;
   text-align: center;
   align-items: center;
@@ -79,55 +83,17 @@ section {
   position: absolute;
 }
 
-/* section div {
-  width: 100%;
-  display: flex;
-  transform: scale(1.3);
-  justify-content: center;
-}
-
-section div svg {
-  margin: 0 40px;
-} */
-
 section picture img {
   margin-bottom: 50px;
   width: 100%;
 }
 
-.move1 {
-  animation: example2 4s linear infinite;
-  transform: translateX(-100%);
-}
-.move2 {
-  animation: example2 5s linear infinite alternate;
-  transform: translateX(-100%);
-}
-.move3 {
-  animation: example2 7s linear infinite;
-  transform: translateX(-100%);
-}
-.move4 {
-  animation: example2 8s linear infinite alternate;
-  transform: translateX(-100%);
+section picture {
+  position: relative;
+  width: 100%;
 }
 
-.move-svg {
-  animation: example2 4s linear infinite alternate;
-  transform: translateX(-150%);
-}
-
-/* @keyframes line {
-  from {
-    transform: translateX(0%);
-  }
-
-  to {
-    transform: translateX(100%);
-  }
-} */
-
-@keyframes example2 {
+@keyframes moveLine {
   0% {
     -moz-transform: translateX(-100%); /* Firefox bug fix */
     -webkit-transform: translateX(-100%); /* Firefox bug fix */
@@ -137,5 +103,66 @@ section picture img {
     -moz-transform: translateX(100%); /* Firefox bug fix */
     -webkit-transform: translateX(100%); /* Firefox bug fix */
     transform: translateX(100%);
+  }
+}
+
+.move1 {
+  animation: moveLine 4s linear infinite;
+}
+
+.move2 {
+  animation: moveLine 5s linear infinite;
+}
+
+.move3 {
+  animation: moveLine 7s linear infinite;
+}
+
+.move4 {
+  animation: moveLine 8s linear infinite;
+}
+
+.move-svg1 {
+  position: absolute;
+  bottom: 70px;
+  left: -100%;
+  animation: line 5s linear infinite;
+}
+
+li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+li span {
+  display: block;
+  font-size: 4.5rem;
+}
+
+.emoji {
+  display: none;
+  padding: 1rem;
+}
+
+.emoji span {
+  font-size: 4rem;
+  padding: 0 0.5rem;
+}
+
+@media all and (max-width: 768px) {
+  h1 {
+    font-size: calc(1.5rem * var(--smaller));
+  }
+
+  li {
+    font-size: calc(1.125rem * var(--smaller));
+  }
+
+  li span {
+    font-size: calc(3.375rem * var(--smaller));
   }
 }
