@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'fluxity-reg';
+  src: url('../font/Aeonik-Regular.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'fluxity-Med';
+  src: url('../font/Aeonik-Medium.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'fluxity-bold';
+  src: url('../font/Aeonik-Bold.ttf');
+  font-weight: normal;
+}

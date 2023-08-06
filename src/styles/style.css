@@ -1,0 +1,168 @@
+@import url(colors.css);
+
+:root {
+  --smaller: 0.75;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: fluxity-reg;
+}
+
+a,
+h1,
+h2,
+h3 {
+  color: var(--black);
+  text-decoration: none;
+}
+
+body {
+  height: 100dvh;
+  overflow-x: hidden;
+  position: relative;
+  background-color: var(--background);
+}
+
+header {
+  height: 100px;
+  display: flex;
+  padding: 0 150px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.links {
+  width: 40%;
+  display: flex;
+  font-size: 18px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.waitlist-btn {
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 19px;
+  padding: 18px 30px;
+  border-radius: 12px;
+  background-color: var(--purple);
+}
+
+.logo span {
+  font-size: 3em;
+  margin-left: 8px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 70px;
+  text-align: center;
+  align-items: center;
+  letter-spacing: 0.1em;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 80px;
+  margin-top: 25px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+/* linear svgs styles */
+section {
+  left: 0;
+  right: 0;
+  bottom: 15px;
+  position: absolute;
+}
+
+section picture img {
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+section picture {
+  position: relative;
+  width: 100%;
+}
+
+@keyframes moveLine {
+  0% {
+    -moz-transform: translateX(-100%); /* Firefox bug fix */
+    -webkit-transform: translateX(-100%); /* Firefox bug fix */
+    transform: translateX(-100%);
+  }
+  100% {
+    -moz-transform: translateX(100%); /* Firefox bug fix */
+    -webkit-transform: translateX(100%); /* Firefox bug fix */
+    transform: translateX(100%);
+  }
+}
+
+.move1 {
+  animation: moveLine 4s linear infinite;
+}
+
+.move2 {
+  animation: moveLine 5s linear infinite;
+}
+
+.move3 {
+  animation: moveLine 7s linear infinite;
+}
+
+.move4 {
+  animation: moveLine 8s linear infinite;
+}
+
+.move-svg1 {
+  position: absolute;
+  bottom: 70px;
+  left: -100%;
+  animation: line 5s linear infinite;
+}
+
+li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+li span {
+  display: block;
+  font-size: 4.5rem;
+}
+
+.emoji {
+  display: none;
+  padding: 1rem;
+}
+
+.emoji span {
+  font-size: 4rem;
+  padding: 0 0.5rem;
+}
+
+@media all and (max-width: 768px) {
+  h1 {
+    font-size: calc(1.5rem * var(--smaller));
+  }
+
+  li {
+    font-size: calc(1.125rem * var(--smaller));
+  }
+
+  li span {
+    font-size: calc(3.375rem * var(--smaller));
+  }
+}
