@@ -21,7 +21,7 @@ h3 {
 
 body {
   height: 100dvh;
-  overflow-x: hidden;
+  overflow: hidden;
   position: relative;
   background-color: var(--background);
 }
@@ -156,13 +156,14 @@ li span {
   padding: 0 0.5rem;
 }
 
-@media (min-width: 360px) and (max-width: 50em) {
-  body {
-    height: 100vh;
+@media (min-width: 355px) and (max-width: 767px) {
+  header {
+    width: 90%;
   }
+
   main h1 {
-    font-size: calc(3rem * var(--smaller));
-    line-height: 2.2rem;
+    font-size: calc(3.8rem * var(--smaller));
+    line-height: 2.6rem;
     letter-spacing: 0;
   }
   main h2 {
@@ -228,7 +229,7 @@ li span {
   }
 }
 
-@media only screen and (max-width: 1360px) {
+@media only screen and (max-width: 1360px) and (min-width: 768px) {
   main {
     padding: 10px;
   }
