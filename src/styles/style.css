@@ -81,7 +81,7 @@ main h2 {
 section {
   left: 0;
   right: 0;
-  bottom: 0px;
+  bottom: 0;
   position: absolute;
 }
 
@@ -92,13 +92,14 @@ section picture img {
 
 @keyframes moveLine {
   0% {
-    -moz-transform: translateX(-100%); /* Firefox bug fix */
-    -webkit-transform: translateX(-100%); /* Firefox bug fix */
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
   }
+
   100% {
-    -moz-transform: translateX(100%); /* Firefox bug fix */
-    -webkit-transform: translateX(100%); /* Firefox bug fix */
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
     transform: translateX(100%);
   }
 }
@@ -155,33 +156,46 @@ li span {
   padding: 0 0.5rem;
 }
 
-@media (min-width: 360px) and (max-width: 60em) {
+@media (min-width: 360px) and (max-width: 50em) {
+  body {
+    height: 100vh;
+  }
   main h1 {
-    font-size: calc(4.6rem * var(--smaller));
-    line-height: 4rem;
+    font-size: calc(3rem * var(--smaller));
+    line-height: 2.2rem;
+    letter-spacing: 0;
   }
   main h2 {
     font-size: calc(2rem * var(--smaller));
   }
 
+  ul {
+    margin-top: 12px;
+    gap: 1px;
+  }
+
+  ul li {
+    transform: scale(0.85) !important;
+    padding: 20px 0px;
+    width: 85px;
+    font-size: 15px;
+  }
+
+  li span {
+    font-size: 25px;
+  }
+
   main {
-    padding: 0.5rem;
+    padding: 1rem;
   }
 
   .logo picture img {
     width: 100%;
   }
 
-  ul {
-    gap: 5px;
-  }
-
-  ul li {
-    transform: scale(0.85) !important;
-  }
-
   .whitepaper-btn {
-    padding: 18px 15px;
+    padding: 15px 12px;
+    font-size: 16px;
   }
 
   html {
@@ -194,21 +208,54 @@ li span {
     font-size: calc(6.7rem * var(--smaller));
     line-height: 5.4rem;
   }
+
   main h2 {
     font-size: calc(2.7rem * var(--smaller));
   }
 
-  ul li {
-    transform: scale(0.9) !important;
-  }
-
   ul {
     margin-top: 12px;
+  }
+
+  ul li {
+    transform: scale(0.9) !important;
   }
 }
 
 @media only screen and (min-width: 768px) and (orientation: landscape) {
   ul {
     margin-top: 14px;
+  }
+}
+
+@media only screen and (max-width: 1360px) {
+  main {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 60px !important;
+    line-height: 4rem !important;
+  }
+
+  ul li {
+    transform: scale(0.8) !important;
+    font-size: 15px;
+  }
+
+  li span {
+    font-size: 35px;
+  }
+
+  .logo picture img {
+    width: 200px;
+  }
+
+  .whitepaper-btn {
+    font-size: 18px;
+  }
+
+  section picture img {
+    margin-bottom: 35px;
   }
 }
