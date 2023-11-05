@@ -21,7 +21,7 @@ h3 {
 
 body {
   height: 100dvh;
-  overflow: hidden;
+  overflow-x: hidden;
   position: relative;
   background-color: var(--background);
 }
@@ -36,7 +36,7 @@ header {
   justify-content: space-between;
 }
 
-.whitepaper-btn {
+.launch-app-btn {
   border: none;
   color: white;
   cursor: pointer;
@@ -47,7 +47,7 @@ header {
   transition: 0.3s;
 }
 
-.whitepaper-btn:hover {
+.launch-app-btn:hover {
   background-color: #321cbd;
 }
 
@@ -65,29 +65,40 @@ main {
   justify-content: center;
 }
 
+.title {
+  width: 70%;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
 main h1 {
   font-size: 80px;
-  margin-top: 25px;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.08em;
   line-height: 6rem;
 }
 
 main h2 {
   font-size: 30px;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.07em;
+  margin-bottom: 16px;
+}
+
+.whitepaper {
+  margin-right: 32px;
+  font-size: 18px;
 }
 
 /* linear svgs styles */
-section {
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-}
 
 section picture img {
   margin-bottom: 50px;
   width: 100%;
+}
+
+.links {
+  display: inline-flex;
+  align-items: center;
 }
 
 @keyframes moveLine {
@@ -144,6 +155,7 @@ li span {
   font-size: 2.7rem;
   text-align: center;
   margin-bottom: 6px;
+  font-family: 'fluxity-Med';
 }
 
 .emoji {
@@ -164,8 +176,9 @@ li span {
   main h1 {
     font-size: calc(3.8rem * var(--smaller));
     line-height: 2.6rem;
-    letter-spacing: 0;
+    letter-spacing: 0.08em;
   }
+
   main h2 {
     font-size: calc(2rem * var(--smaller));
   }
@@ -191,12 +204,18 @@ li span {
   }
 
   .logo picture img {
-    width: 100%;
+    width: 80%;
   }
 
-  .whitepaper-btn {
-    padding: 15px 12px;
-    font-size: 16px;
+  .launch-app-btn {
+    padding: 10px 12px;
+    width: 100px;
+    font-size: 12px;
+  }
+
+  .whitepaper {
+    margin-right: 5px;
+    font-size: 12px;
   }
 
   html {
@@ -252,7 +271,7 @@ li span {
     width: 200px;
   }
 
-  .whitepaper-btn {
+  .launch-app-btn {
     font-size: 18px;
   }
 
